@@ -3,6 +3,10 @@ class Particle {
   PVector position;
   PVector velocity;
   PVector acceleration;
+  float colourR = random(0, 255);
+  float colourG = random(0, 255);
+  float colourB = random(0, 255);
+  
   
   Particle(float x, float y){
     position = new PVector(x, y);
@@ -16,6 +20,7 @@ class Particle {
   }
   
   void display(){
+    fill(colourR, colourG, colourB);
     ellipse(position.x, position.y, 10, 10);
   }
 }
